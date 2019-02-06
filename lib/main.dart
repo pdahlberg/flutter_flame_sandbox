@@ -49,16 +49,17 @@ class MyGame extends BaseGame {
     this.crate1 = Crate();
     this.crate1.x = 100.0;
     this.crate1.y = 100.0;
+    add(crate1);
 
     this.crate2 = Crate();
     this.crate2.x = 200.0;
     this.crate2.y = 100.0;
+    add(crate2);
   }
 
   @override
-  void render(Canvas canvas) {
-    this.crate1.render(canvas);
-    this.crate2.render(canvas);
+  void renderComponent(Canvas canvas, Component c) {
+    super.renderComponent(canvas, c);
   }
 
   @override
